@@ -9,6 +9,11 @@ a, a:hover, a:focus {
   color: inherit;
 }
 
+hr {
+  background-color: #333;
+  border-color: #333;
+}
+
 .sidebar li.brand{
   height: 130px;
   background-color: #CC8449;
@@ -58,9 +63,9 @@ header.header {
 
 .content-wrapper {
   height: 100%;
-  background-color: #e1e1e1;
+  background-color: #fff;
   position: absolute;
   left: 300px;
   right: 0px;
-  padding: 100px;
+  padding: 50px 100px;
 }
