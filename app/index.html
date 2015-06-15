@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
+  <title>Client Services Portal</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
@@ -37,7 +37,7 @@
 
   <div class='notes-wrapper' ng-controller="appCtrl as vm" ng-class='vm.note.shown ? "shown" : "notShown"'>
       <div class='notes'>
-        <p>Notes</p>
+        <h3>Notes</h3>
         <textarea focus-on="noteShown" tab-index='0' name="notes" id="notes" cols="30" rows="10" ng-model="vm.note.text"></textarea>
       </div>
   </div>
@@ -63,6 +63,7 @@
   <script src="view2/view2.js"></script>
   <script src="home/home.js"></script>
   <script src="patients_list/patients_list.js"></script>
+  <script src="patient_details/patient_details.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>

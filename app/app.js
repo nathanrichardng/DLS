@@ -9,6 +9,7 @@ angular
 	  'myApp.view2',
 	  'CS.home',
 	  'CS.patientsList',
+	  'CS.patientDetails',
 	  'myApp.version'
 	])
 	.config(config)

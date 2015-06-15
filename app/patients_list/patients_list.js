@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-	.module('CS.patientsList', ['ngRoute', 'cfp.hotkeys'])
+	.module('CS.patientsList', ['ngRoute'])
 	.config(config)
 	.controller('patientsListCtrl', patientsListCtrl);
 
@@ -22,7 +22,11 @@ function config ($routeProvider) {
 
 function patientsListCtrl(patientService) {
 	var vm = this;
-	vm.table = true;
-	vm.patients = patientService.getPatients();
-	console.log(vm.patients);
+	vm.patients = patientService.lastQuery() || {};
+	vm.getPatients = getPatients;
+
+	function getPatients() {
+		vm.patients = patientService.getPatients();
+		window.alert(patientService.lastQuery());
+	}
 };
