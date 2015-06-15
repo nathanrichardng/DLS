@@ -8,6 +8,9 @@ function focusOn() {
         if(name === attr.focusOn) {
           elem[0].focus();
         }
+        else {
+        	elem[0].blur();
+        }
       });
    };
 };

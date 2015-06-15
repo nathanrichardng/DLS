@@ -5,8 +5,9 @@ angular
 
 function patientService() {
 
-	//change this to an array of objects later to better store query history and parameters
-	var queryHistory = null;
+	//use this array to help the CS rep pull up their recent searches.
+	//change to store as objects with query params and results together.
+	var queryHistory = [];
 
 	return {
 		getPatients:getPatients,
@@ -15,7 +16,8 @@ function patientService() {
 	}
 
 	function lastQuery() {
-		return queryHistory;
+		var lastIndex = queryHistory.length - 1;
+		return queryHistory[lastIndex];
 	}
 
 	function getPatient(accn) {
@@ -139,7 +141,7 @@ function patientService() {
 			}
 		];
 
-		queryHistory = patients;
+		queryHistory.push(patients);
 
 		return patients;
 	}
