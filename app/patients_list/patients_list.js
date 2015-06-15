@@ -27,6 +27,5 @@ function patientsListCtrl(patientService) {
 
 	function getPatients() {
 		vm.patients = patientService.getPatients();
-		window.alert(patientService.lastQuery());
 	}
 };
